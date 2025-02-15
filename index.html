@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .week {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .week-title {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+        .topics, .materials, .activities, .assignments, .projects {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .assignment, .project {
+            background-color: #fff8dc; /* Light yellow for emphasis */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .week {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        .week-title {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .topics, .materials, .activities, .assignments, .projects {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .assignment, .project {
+            background-color: #fff8dc; /* Light yellow for emphasis */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .project-suggestions {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-suggestions h2 {
+            margin-bottom: 15px;
+        }
+
+        .project-list {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+
+        .project-list li {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        /* Dropdown Styles */
+        .week-selector {
+            margin-bottom: 20px;
+        }
+
+        .week-selector select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            appearance: none; /* Remove default arrow */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") no-repeat right 10px center; /* Add custom arrow */
+            padding-right: 30px; /* Adjust padding for arrow */
+        }
+
+        .week-selector select:focus {
+            outline: none;
+            border-color: #3498db; /* Highlight on focus */
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Subtle shadow on focus */
+        }
+
+        /* Hide weeks initially (except the first one) */
+        .week:not(:first-of-type) {
+            display: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .week {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+
+            .week-title {
+                padding: 8px; /* Reduce padding on smaller screens */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Reduce heading size */
+            }
+
+            h3 {
+                font-size: 1.2em; /* Reduce heading size */
+            }
+
+            ul {
+                margin-left: 15px; /* Adjust list indentation */
+            }
+        }
+    </style>
+
+    </style>
+    </head>
+<body>
+    <h1>7-Week React Course</h1>
+
+  
+
+    <div class="week-selector">
+        <select id="weekSelect" onchange="showSection()">
+            <option value="1">Week 1</option>
+            <option value="2">Week 2</option>
+            <option value="3">Week 3</option>
+            <option value="4">Week 4</option>
+            <option value="5">Week 5</option>
+            <option value="6">Week 6</option>
+            <option value="7">Week 7</option>
+            <option value="projects">Final Project Suggestions</option> </select>
+    </div>
+
+    <div class="week" id="week1">
+        <p>This course will take you through the fundamentals of React, focusing on core concepts and practical application. We'll build upon each week, culminating in a solid understanding of how to create and manage React applications.</p>
+        <div class="week-title"><h2>Week 1: Introduction to React and Components</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>Functional Components</li>
+                <li>JSX</li>
+                <li>Props vs State</li>
+                <li>Conditional Rendering</li>
+                <li>Composition</li>
+                <li>Component Basics</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://reactjs.org/docs/components-and-props.html" target="_blank">React Official Documentation - Components and Props</a></li>
+                <li><a href="https://reactjs.org/docs/jsx-in-depth.html" target="_blank">React Official Documentation - JSX</a></li>
+                <li><a href="https://www.w3schools.com/react/" target="_blank">W3Schools React Tutorial</a></li>
+                <li><a href="https://www.freecodecamp.org/learn/front-end-development-libraries/react/" target="_blank">FreeCodeCamp React Curriculum</a></li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Create your first functional component.</li>
+                <li>Practice passing data using props.</li>
+                <li>Build a simple UI with conditional rendering.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 1:</strong> Create a component that displays a greeting message based on the time of day.  Use props to customize the greeting.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 1:</strong> Build a simple to-do list application.  Users should be able to add, remove, and mark tasks as complete.</p>
+            </div>
+        </div>
+    </div>
+    <div class="week" id="week2">
+        <div class="week-title"><h2>Week 2: Working with State and Effects</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>useState</li>
+                <li>useEffect</li>
+                <li>Basic Hooks</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://reactjs.org/docs/hooks-state.html" target="_blank">React Official Documentation - Using the State Hook</a></li>
+                <li><a href="https://reactjs.org/docs/hooks-effect.html" target="_blank">React Official Documentation - Using the Effect Hook</a></li>
+                <li><a href="https://kentcdodds.com/blog/useeffect-explained" target="_blank">Kent C. Dodds' Blog - `useEffect` Deep Dive</a></li>
+                <li>"Dave Gray" on YouTube - React Hooks Tutorial (Search on YouTube)</li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Build an interactive component using useState.</li>
+                <li>Fetch data from an API using useEffect.</li>
+                <li>Implement a counter using hooks.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 2:</strong> Create a component that fetches data from a public API (e.g., a random quote API) and displays it.  Use `useEffect` to handle the data fetching.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 2:</strong>  Enhance your to-do list application to save the tasks to local storage so they persist across browser sessions.</p>
+            </div>
+        </div>
+    </div>
+    <p>This course will take you through the fundamentals of React, focusing on core concepts and practical application. We'll build upon each week, culminating in a solid understanding of how to create and manage React applications.</p>
+    </div>
+
+    <div class="week" id="week3">
+        <div class="week-title"><h2>Week 3: Lists, Keys, and Forms</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>Lists and Keys</li>
+                <li>Forms</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://reactjs.org/docs/lists-and-keys.html" target="_blank">React Official Documentation - Lists and Keys</a></li>
+                <li><a href="https://reactjs.org/docs/forms.html" target="_blank">React Official Documentation - Forms</a></li>
+                <li>"Codecademy" React Forms Tutorial (Search on YouTube)</li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Render a list of items from an array.</li>
+                <li>Build a form to capture user data.</li>
+                <li>Implement controlled components.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 3:</strong> Create a form that allows users to add new items to a list.  Display the updated list whenever a new item is added.  Use controlled components for the form inputs.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 3:</strong> Build a simple e-commerce product listing page.  Display a list of products (you can use placeholder data).  Each product should have an image, name, price, and a "Add to Cart" button.  (Don't worry about actual cart functionality for this project, just the UI).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="week" id="week4">
+        <div class="week-title"><h2>Week 4: Context and Advanced Hooks</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>useContext</li>
+                <li>useRef</li>
+                <li>useCallback</li>
+                <li>Common Hooks (Review)</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://reactjs.org/docs/context.html" target="_blank">React Official Documentation - Context</a></li>
+                <li><a href="https://reactjs.org/docs/hooks-reference.html#useref" target="_blank">React Official Documentation - useRef</a></li>
+                <li><a href="https://reactjs.org/docs/hooks-reference.html#usecallback" target="_blank">React Official Documentation - useCallback</a></li>
+                <li>"The Net Ninja" on YouTube - React Context API Tutorial (Search on YouTube)</li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Implement a theme switcher using Context API.</li>
+                <li>Build a component that focuses an input on mount using useRef.</li>
+                <li>Optimize a component using useCallback.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 4:</strong> Create a component that manages a user's theme preference (light/dark mode) using Context API.  The theme should be applied to the entire application.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 4:</strong> Build a simple form with several input fields. Use `useRef` to automatically focus the first input field when the component mounts.  Use `useCallback` to optimize any functions that are passed down as props to child components.</p>
+            </div>
+        </div>
+        </div>
+
+    <div class="week" id="week5">
+        <div class="week-title"><h2>Week 5: Routing with React Router</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>React Router</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://reactrouter.com/docs/en/v6/getting-started/overview" target="_blank">React Router Official Documentation</a></li>
+                <li>"PedroTechnologies" on YouTube - React Router Tutorial (Search on YouTube)</li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Build a multi-page application with React Router.</li>
+                <li>Implement navigation and dynamic routes.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 5:</strong> Convert your to-do list application (from Week 1 or 2) into a multi-page application using React Router.  Create separate pages for adding tasks, viewing tasks, and a "home" page.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 5:</strong>  Create a simple blog application with multiple pages (e.g., home, about, contact, and individual blog post pages). Use React Router to handle navigation.  You can use placeholder data for the blog posts.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="week" id="week6">
+        <div class="week-title"><h2>Week 6: State Management with Context (and potentially Zustand/Jotai)</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>Context (Deep Dive)</li>
+                <li>Zustand/Jotai (Optional)</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li>"UseContext vs Redux" articles (Search online)</li>
+                <li><a href="https://zustand.surge.sh/" target="_blank">Zustand Documentation</a> (If covering Zustand)</li>
+                <li><a href="https://jotai.org/" target="_blank">Jotai Documentation</a> (If covering Jotai)</li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Manage application-wide state using Context.</li>
+                <li>Implement a simple store with Zustand or Jotai (optional).</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 6:</strong> Refactor your e-commerce product listing application (from Week 3) to manage the cart state using Context API.  Implement the "Add to Cart" functionality to update the cart count in the header.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 6:</strong>  Build a more complex application (e.g., a simple social media feed, a recipe app, or a small dashboard) that requires managing global state.  Use Context API (or Zustand/Jotai if you covered it) for state management.</p>
+            </div>
+        </div>
+        </div>
+
+    <div class="week" id="week7">
+        <div class="week-title"><h2>Week 7: Testing and Building</h2></div>
+        <div class="topics">
+            <h3>Topics:</h3>
+            <ul>
+                <li>Vitest / Jest</li>
+                <li>Building</li>
+            </ul>
+        </div>
+        <div class="materials">
+            <h3>Materials/Tutorials:</h3>
+            <ul>
+                <li><a href="https://vitest.dev/" target="_blank">Vitest Documentation</a> (If using Vitest)</li>
+                <li><a href="https://jestjs.io/docs/getting-started" target="_blank">Jest Documentation</a> (If using Jest)</li>
+                <li><a href="https://reactjs.org/docs/optimizing-performance.html#production-build" target="_blank">React Official Documentation - Production Build</a></li>
+                <li><a href="https://testingjavascript.com/" target="_blank">"Testing JavaScript" by Kent C. Dodds</a></li>
+            </ul>
+        </div>
+        <div class="activities">
+            <h3>Activities:</h3>
+            <ul>
+                <li>Write unit tests for your components.</li>
+                <li>Learn how to create a production build.</li>
+            </ul>
+        </div>
+        <div class="assignments">
+            <h3>Assignments:</h3>
+            <div class="assignment">
+                <p><strong>Assignment 7:</strong> Write unit tests for the key components of your final project.  Focus on testing the functionality and interactions of the components.</p>
+            </div>
+        </div>
+        <div class="projects">
+            <h3>Projects:</h3>
+            <div class="project">
+                <p><strong>Project 7:</strong> Prepare your final project for deployment by creating a production build.  If possible, deploy your project to a hosting platform (e.g., Netlify, Vercel, or GitHub Pages).</p>
+            </div>
+        </div>
+    </div>
+    <div class="project-suggestions" id="projects">
+            <div class="project-suggestions">
+                <h2>Final Project Suggestions</h2>
+                <ul class="project-list">
+                    <li><strong>Personal Portfolio Website:</strong> A single-page website showcasing the student's skills, projects, and contact information. Focus on clean design, responsive layout, and using components effectively.</li>
+                    <li><strong>Simple E-commerce Storefront (Simplified):</strong> Display a catalog of products (using mock data or a simple API integration). Focus on dynamic lists, conditional rendering, and potentially a basic cart feature using Context API.</li>
+                    <li><strong>Interactive Quiz App:</strong> Create a quiz with multiple-choice questions, scoring, and feedback. Focus on state management, event handling, and conditional rendering.</li>
+                    <li><strong>Basic Task Management App (Enhanced):</strong> Go beyond the simple to-do list. Add features like due dates, categories, prioritization, and local storage persistence.</li>
+                    <li><strong>Blog Application (with Content Management):</strong> A blog with multiple pages (home, about, contact, blog posts). Implement routing, dynamic content loading (mock data or a simple CMS integration), and potentially a basic commenting system.</li>
+                    <li><strong>Recipe App:</strong> Fetch recipes from an API (e.g., The Meal DB) and display them with filtering and search capabilities. Focus on API integration, data handling, and potentially using a state management library like Zustand or Jotai.</li>
+                    <li><strong>Simple Social Media Feed (Simplified):</strong> A feed displaying posts (mock data or simple API). Implement features like posting, liking, and potentially following/followers (simplified). Focus on state management and data flow.</li>
+                    <li><strong>Real-time Chat Application (Basic):</strong> Use a simple backend service (or a service like Firebase) to create a chat application. Focus on handling real-time data, user authentication (simplified), and UI updates.</li>
+                    <li><strong>Full-Stack E-commerce Application (Miniaturized):</strong> Integrate with a backend (you can provide a simple one or guide students to create one) for product data, user authentication, and order processing (simplified). Focus on data fetching, state management, routing, and potentially payment gateway integration (mock or simplified).</li>
+                    <li><strong>Project Management Dashboard:</strong> Create a dashboard for managing tasks, projects, and team members (mock data or simple backend). Focus on complex state management, data visualization (using libraries like Chart.js), and user interface design.</li>
+                    <li><strong>Custom API Integration Project:</strong> Choose a public API (e.g., weather, news, movies) and build an application around it. Focus on API interaction, data processing, and presenting information effectively.</li>
+                </ul>
+            </div>
+    </div>
+
+    
+    <script>
+        function showSection() {
+            const selectedSection = document.getElementById("weekSelect").value;
+            const weeks = document.querySelectorAll(".week");
+            const projects = document.getElementById("projects");
+
+            weeks.forEach(week => week.style.display = "none");
+            projects.style.display = "none";
+
+            if (selectedSection === "projects") {
+                projects.style.display = "block";
+            } else {
+                document.getElementById(`week${selectedSection}`).style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
