@@ -264,5 +264,63 @@
             nav.open { /* Show navigation links when menu is open */
                 display: block;
             }
+            header {
+                padding: 15px; /* Reduce header padding */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Reduce heading size */
+            }
+
+            nav {
+                text-align: left; /* Align navigation to the left */
+                padding: 5px; /* Reduce nav padding */
+            }
+
+            nav a {
+                display: block; /* Stack navigation links vertically */
+                margin: 5px 0; /* Add margin between links */
+                padding: 10px; /* Adjust padding */
+                text-align: center; /* Center text within the links */
+            }
+
+            main {
+                padding: 10px; /* Reduce main padding */
+            }
+
+            section {
+                padding: 15px; /* Reduce section padding */
+            }
+
+            h2 {
+                font-size: 1.2em; /* Reduce section heading size */
+            }
+
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em; /* Make the menu icon bigger */
+                padding: 10px; /* Add some padding around the icon */
+            }
+
+            nav.open a {
+                display: block; /* Show links when menu is open */
+            }
+
+            /* Hide the menu icon when the menu is open */
+            nav.open .menu-icon {
+                display: none;
+            }
+
+            /* Style the close icon that appears when menu is open */
+            nav.open .close-icon {
+                display: block;
+                cursor: pointer;
+                font-size: 1.5em;
+                padding: 10px;
+            }
+            .close-icon {
+                display: none; /* Initially hidden */
+            }
         }
    
