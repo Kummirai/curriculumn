@@ -18,6 +18,7 @@
             }
         }
 
+
         const menuIcon = document.querySelector('.menu-icon');
         const nav = document.querySelector('nav');
 
