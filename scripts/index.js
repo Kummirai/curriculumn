@@ -1,4 +1,6 @@
 
+        document.querySelector('#week1').style.display = "block"
+        
         function showSection() {
             const selectedSection = document.getElementById("weekSelect").value;
             const weeks = document.querySelectorAll(".week");
