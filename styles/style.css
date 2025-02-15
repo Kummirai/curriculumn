@@ -1,0 +1,165 @@
+
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .week {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .week-title {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+        .topics, .materials, .activities, .assignments, .projects {
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .assignment, .project {
+            background-color: #fff8dc; /* Light yellow for emphasis */
+            padding: 10px;
+            border-radius: 5px;
+        }
+    
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .week {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        .week-title {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .topics, .materials, .activities, .assignments, .projects {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .assignment, .project {
+            background-color: #fff8dc; /* Light yellow for emphasis */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .project-suggestions {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-suggestions h2 {
+            margin-bottom: 15px;
+        }
+
+        .project-list {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+
+        .project-list li {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        /* Dropdown Styles */
+        .week-selector {
+            margin-bottom: 20px;
+        }
+
+        .week-selector select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            appearance: none; /* Remove default arrow */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") no-repeat right 10px center; /* Add custom arrow */
+            padding-right: 30px; /* Adjust padding for arrow */
+        }
+
+        .week-selector select:focus {
+            outline: none;
+            border-color: #3498db; /* Highlight on focus */
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Subtle shadow on focus */
+        }
+
+        /* Hide weeks initially (except the first one) */
+        .week:not(:first-of-type) {
+            display: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) { /* Adjust breakpoint as needed */
+            .week {
+                padding: 10px; /* Reduce padding on smaller screens */
+            }
+
+            .week-title {
+                padding: 8px; /* Reduce padding on smaller screens */
+            }
+
+            h2 {
+                font-size: 1.5em; /* Reduce heading size */
+            }
+
+            h3 {
+                font-size: 1.2em; /* Reduce heading size */
+            }
+
+            ul {
+                margin-left: 15px; /* Adjust list indentation */
+            }
+        }
+   
