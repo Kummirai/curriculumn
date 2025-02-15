@@ -44,11 +44,11 @@
             });
         });
 
-        function showSection(sectionId) {
-            // Hide all sections
-            document.getElementById('overview').style.display = 'none';
-            document.getElementById('curriculum').style.display = 'none';
+        // function showSection(sectionId) {
+        //     // Hide all sections
+        //     document.getElementById('overview').style.display = 'none';
+        //     document.getElementById('curriculum').style.display = 'none';
 
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
+        //     // Show the selected section
+        //     document.getElementById(sectionId).style.display = 'block';
+        // }
