@@ -7,8 +7,41 @@
     <meta name="description" content="7 Week React Course">
     <meta name="author" content="Milton Kumirai">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 <body>
+    <div id="back-to-top">
+        <i class="fas fa-arrow-up"></i> </div>
+        <header>
+            <h1>React Fundamentals Course</h1>
+            <p>Learn to build modern web applications with React.</p>
+            <div class="menu-icon">&#9776;</div>
+        </header>
+    
+        <nav>
+            <a href="#overview" onclick="showSection('overview')">Overview</a>
+            <a href="#curriculum" onclick="showSection('curriculum')">Curriculum</a>
+        </nav>
+    
+        <main>
+            <section id="overview">
+                <h2>Course Overview</h2>
+                <p>This comprehensive course will guide you through the essentials of React, from setting up your environment to building complex user interfaces. You'll learn about components, JSX, state management, routing, and more.  Whether you're a beginner or have some web development experience, this course will equip you with the skills to create dynamic and interactive web applications.</p>
+            </section>
+    
+            <section id="curriculum">
+                <h2>Course Curriculum</h2>
+                <ul>
+                    <li>Introduction to React</li>
+                    <li>Components and JSX</li>
+                    <li>State and Props</li>
+                    <li>Working with Events</li>
+                    <li>Forms and Inputs</li>
+                    <li>Routing with React Router</li>
+                    <li>State Management with Context API</li>
+                    <li>Testing and Deployment</li>
+                </ul>
+            </section>
     <h1>7-Week React Course</h1>
     <div class="week-selector">
         <select id="weekSelect" onchange="showSection()">

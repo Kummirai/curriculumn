@@ -7,6 +7,60 @@
         h1, h2, h3 {
             color: #333;
         }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .menu-icon {
+            display: none; /* Hide menu icon initially */
+        }
+
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
         .week {
             margin-bottom: 20px;
             border: 1px solid #ddd;
@@ -140,6 +194,43 @@
             display: none;
         }
 
+        #back-to-top {
+            display: inline-block;
+            background-color: #3498db; /* Blue */
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 50%; /* Make it circular */
+            position: fixed; /* Fixed position */
+            bottom: 20px;
+            right: 20px;
+            z-index: 100; /* Ensure it's on top */
+            cursor: pointer;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        #back-to-top i { /* Style the icon inside */
+            color: white;
+            font-size: 2em;
+            line-height: 50px; /* Vertically center the icon */
+        }
+
+        #back-to-top:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
+        #back-to-top.show { /* Show the button when scrolled */
+            opacity: 1;
+        }
+
+        #overview, #curriculum {
+            display: none;
+        }
+
+        /* Style for when the sections are shown */
+    
+
         /* Responsive Styles */
         @media (max-width: 768px) { /* Adjust breakpoint as needed */
             .week {
@@ -160,6 +251,18 @@
 
             ul {
                 margin-left: 15px; /* Adjust list indentation */
+            }
+            nav a {
+                display: none; /* Hide navigation links on smaller screens */
+            }
+
+            .menu-icon {
+                display: block; /* Show menu icon on smaller screens */
+                cursor: pointer;
+            }
+
+            nav.open { /* Show navigation links when menu is open */
+                display: block;
             }
         }
    
